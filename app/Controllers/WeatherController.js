@@ -26,13 +26,14 @@ export default class WeatherController {
   }
 
   toggleDeg() {
-    debugger
     let res = ProxyState.weather
-    if (document.getElementById("weatherArea").innerHTML = res.fTemplate) {
+    if (res.showF) {
       document.getElementById("weatherArea").innerHTML = res.cTemplate
+      res.showF = false
     }
-    else if(document.getElementById("weatherArea").innerHTML = res.cTemplate){
+    else{
       document.getElementById("weatherArea").innerHTML = res.fTemplate
+      res.showF = true
     }
   }
 
