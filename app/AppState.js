@@ -5,7 +5,7 @@ import Image from "./models/Quote.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
-// X TODO you will want to add all your other data to the AppState
+// XX TODO you will want to add all your other data to the AppState
 class AppState extends EventEmitter {
   /** @type {Todo[]} */
   todos = []

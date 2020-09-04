@@ -11,7 +11,6 @@ function _drawImage() {
 
 export default class ImageController { 
   constructor(){
-    debugger
     this.getImage()
     ProxyState.on("image", _drawImage)
  }

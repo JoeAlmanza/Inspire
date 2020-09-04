@@ -8,7 +8,8 @@ class ImageService {
 
   async getImage(){
     let res = await api.get("images")
-    ProxyState.image = res.data.large_url
+    console.log(res);
+    ProxyState.image = res.data.url
   }
  }
 
