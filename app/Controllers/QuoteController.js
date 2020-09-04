@@ -5,7 +5,7 @@ import quoteService from "../Services/QuoteService.js";
 function _drawQuote() {
   let quote = ProxyState.quote
   console.log(quote);
-  document.getElementById("quoteArea").innerHTML = `${quote}`
+  document.getElementById("quoteArea").innerHTML = `<h4>${quote}</h4>`
 }
 
 export default class QuoteController {
