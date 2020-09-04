@@ -46,6 +46,11 @@
     cursor: pointer;
   }
 
+  #clockArea{
+    font-size: 10vh;
+    color: white;
+  }
+
 *,
 *::before,
 *::after {
