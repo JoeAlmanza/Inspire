@@ -1,5 +1,5 @@
 import Todo from "./Models/Todo.js"
-import Weather from "./Models/Weather.js"
+import Weather from "./models/Weather.js"
 import Quote from "./Models/Quote.js"
 import Image from "./models/Quote.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"

@@ -6,7 +6,10 @@ import weatherService from "../Services/WeatherService.js";
 
 //TODO Complete rendering data to the screen
 function drawWeather() {
+  let template = ""
+  let weather = ProxyState.weather
   console.log("THE WEATHER MAN SAYS:", ProxyState.weather);
+  document.getElementById("weatherArea").innerHTML = weather.Template
 }
 export default class WeatherController {
   constructor() {
