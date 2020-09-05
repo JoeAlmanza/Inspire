@@ -6,19 +6,18 @@ export default class Todo {
 
   get Template() {
     return `
-    <div class="card col-12 p-0 m-auto text-center bg-primary">
+    <div class="card col-12 p-0 mb-0 text-center text-primary bg-tp">
     <div class="card-header" id="cardHeader">
-      <h3 class="text-dark"><u>To Do:</u>   <i class="fa fa-times" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></h3>
+      <h3 class=""><u>To Do:</u>   <i class="fa fa-times" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></h3>
     </div>
-    <form onsubmit="app.todoController.addTodo(event, '${this.id}')">
+    <form class="mt-1"onsubmit="app.todoController.addTodo(event, '${this.id}')">
       <div class="form-group">
       <ul class="list-group list-group-flush">
         ${this.todo}
       </ul>
-        <label for="todoBody" class="ml-3 mt-2 text-dark"><b>Add task...</b></label>
-        <input type="text" class="" id="todoBody" placeholder="Enter your new task...">
+        <input type="text" class="todoForm" id="todoBody" placeholder="Enter a task...">
       </div>
-        <button class="btn btn-dark mb-2" type="submit">Add Task</button>
+        <button class="btn btn-primary mb-2 todoButton" type="submit">Add Task</button>
     </form>
   </div>
   </div>

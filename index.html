@@ -10,30 +10,30 @@
 </head>
 
 <body onload="startTime()">
-    <main class="container-fluid" id="bg-img">
+    <main class="container-fluid h-100" id="bg-img">
         <div class="row">
             <div class="offset-11 col-1" id="weatherArea" onclick="app.weatherController.toggleDeg()">
                 weather over here
             </div>
         </div>
         <div class="row">
-            <div class="col d-flex justify-content-center m-auto" id="clockArea">
+            <div class="col d-flex justify-content-center clockRow" id="clockArea">
                 Clock Goes Here
             </div>
         </div>
-        <div class="row">
+        <div class="row mainRow">
             <div class="col-3">
             </div>
-            <div class="col-6 text-primary text-center d-flex m-auto" id="quoteArea">
+            <div class="col-6 text-light text-center d-flex" id="quoteArea">
             </div>
-            <div class="col-3 justify-content-end" id="todoArea">
+            <div class="col-3 d-flex" id="todoArea">
             </div>
         </div>
     </main>
-    <footer class="container-fluid bg-transparent text-light">
+    <footer class="container-fluid text-primary bg-dark">
         <div class="row text-center">
             <div class="col">
-                <p class="text-dark"><small>Made with love by Codeworks</small></p>
+                <p class=""><small>Made with love by Codeworks</small></p>
             </div>
         </div>
     </footer>

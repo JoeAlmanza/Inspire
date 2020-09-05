@@ -40,16 +40,42 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  }
+}
 
-  #weatherArea{
-    cursor: pointer;
-  }
+#weatherArea{
+  cursor: pointer;
+}
 
-  #clockArea{
-    font-size: 10vh;
-    color: white;
-  }
+#clockArea{
+  font-size: 15vh;
+  color: white;
+  height: 40vh;
+  align-items: flex-end;
+}
+
+.bg-tp {
+  background-color: rgb(30, 30, 30, .75);
+}
+
+.mainRow {
+  height: 44vh;
+  align-items: flex-end;
+}
+
+.todoForm{
+  max-width: 75%;
+}
+
+.todoCard{
+  position: absolute;
+  bottom: 0;
+}
+
+.todoButton {
+  height: 40px;
+
+  max-width: 100%;
+}
 
 *,
 *::before,
@@ -4297,8 +4323,8 @@ input[type=button].btn-block {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-height: 30vh;
   word-wrap: break-word;
-  background-color: white;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
