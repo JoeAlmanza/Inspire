@@ -1,5 +1,4 @@
 import { ProxyState } from "../AppState.js";
-import Todos from "../models/Todo.js"
 import { api } from "../Services/AxiosService.js";
 import Todo from "../models/Todo.js";
 
@@ -16,10 +15,11 @@ class TodoService {
     //TODO Handle this response from the server
   }
 
-  async addTodo(todo) {
-    let res = await api.post(url, todo)
+  async addTodo(rawTodo) {
+    let res = await api.post(url, rawTodo)
     console.log(res);
-    ProxyState.todos = [...ProxyState.todos, new Todo(res.data.data)]
+    let todo = new Todo(res.data.data)
+    ProxyState.todos = [...ProxyState.todos, todo]
     //TODO Handle this response from the server
   }
 

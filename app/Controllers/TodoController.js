@@ -25,11 +25,14 @@ export default class TodoController {
   }
   addTodo(e) {
     e.preventDefault();
-    var form = e.target;
+    let form = e.target;
     //TODO build the todo object from the data that comes into this method
-    var todo = {};
+    let rawTodo = {
+      _id: form.id.value,
+      description: form.todoBody.value
+    };
     try {
-      todoService.addTodo(todo);
+      todoService.addTodo(rawTodo);
     } catch (error) {
       console.error(error)
     }
