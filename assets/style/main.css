@@ -53,6 +53,15 @@
   align-items: flex-end;
 }
 
+.hide {
+  display: none;
+}
+
+.showText:hover + .hide{
+  display: block;
+  color: red;
+}
+
 .bg-tp {
   background-color: rgb(30, 30, 30, .75);
 }
@@ -5014,7 +5023,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .list-group-item:first-child {

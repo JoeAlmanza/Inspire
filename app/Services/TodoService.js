@@ -33,12 +33,10 @@ class TodoService {
     //TODO how do you trigger this change
   }
 
-  async removeTodo(todoId) {
-    let res = await api.delete(url, todoId)
-    console.log(res);
-    let index = ProxyState.todos.findIndex(t => t.id == todoId)
-    ProxyState.todos.splice(index, 1)
-    ProxyState.todos = ProxyState.todos
+  async removeTodo(id) {
+    let res = 
+    await api.delete(url + id)
+    ProxyState.todos = ProxyState.todos.filter(t => t.id !== id)
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, how do you update the state

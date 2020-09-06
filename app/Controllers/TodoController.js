@@ -3,8 +3,8 @@ import { ProxyState } from "../AppState.js";
 
 //TODO Create the draw function
 function _drawTodos() { 
-  let template = ""
   let todos = ProxyState.todos
+  let template = ''
   todos.forEach(t => template += t.Template)
   document.getElementById("todoArea").innerHTML = template
 }
@@ -23,16 +23,17 @@ export default class TodoController {
       console.error(error)
     }
   }
-  addTodo(e) {
+  addTodo(e, id) {
     e.preventDefault();
     let form = e.target;
     //TODO build the todo object from the data that comes into this method
     let rawTodo = {
-      _id: form.id.value,
+      id: form.id.value,
       description: form.todoBody.value
     };
     try {
       todoService.addTodo(rawTodo);
+      form.reset()
     } catch (error) {
       console.error(error)
     }
@@ -40,11 +41,11 @@ export default class TodoController {
 
   /**
  * This method takes in an id of the Todo that should be togggled as complete
- * @param {string} todoId 
+ * @param {string} id 
  */
-  toggleTodoStatus(todoId) {
+  toggleTodoStatus(id) {
     try {
-      todoService.toggleTodoStatus(todoId);
+      todoService.toggleTodoStatus(id);
     } catch (error) {
       console.error(error)
     }
@@ -52,11 +53,11 @@ export default class TodoController {
 
   /**
    * This method takes in an id of the Todo that should be removed
-   * @param {string} todoId 
+   * @param {string} id 
    */
-  removeTodo(todoId) {
+  removeTodo(id) {
     try {
-      todoService.removeTodo(todoId);
+      todoService.removeTodo(id);
     } catch (error) {
       console.error(error)
     }

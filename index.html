@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
 </head>
@@ -26,9 +27,26 @@
             </div>
             <div class="col-6 text-light text-center d-flex" id="quoteArea">
             </div>
-            <div class="col-3 d-flex" id="todoArea">
+            <div class="col-3 d-flex flex-column">
+                <div class="row">
+                    <div class="col p-0 mb-0 text-center text-primary bg-tp">
+                        <div class="card-header" id="cardHeader">
+                            <h3 class=""><u>To Do:</u></h3>
+                        </div>
+                        <form class="mt-1" onsubmit="app.todoController.addTodo(event, '${this.id}')">
+                            <div class="form-group">
+                                <ul class="list-group list-group-flush"  id="todoArea">
+                        
+                                </ul>
+                            <input type="text" class="todoForm" id="todoBody" placeholder="Enter a task...">
+                            </div>
+                        <button class="btn btn-primary mb-2 todoButton" type="submit">Add Task</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </main>
     <footer class="container-fluid text-primary bg-dark">
         <div class="row text-center">
