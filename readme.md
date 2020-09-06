@@ -100,7 +100,7 @@ The todos portion of this project is the largest and will probably take the most
 ## REQUIREMENTS:
  ### Visualization
 - The data from the services are each rendered:
-  - [ ] Quote: Quote always displayed and Author reveals on hover
+  - [X] Quote: Quote always displayed and Author reveals on hover
   - [X] Image: The image is required, however the additional data is optional
   - [X] Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
   - [ ] Todo: Todo's are shown on the page including a count of remaining tasks to complete

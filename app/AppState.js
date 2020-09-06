@@ -15,6 +15,7 @@ class AppState extends EventEmitter {
   image = null
   /** @type {Quote[]} */
   quote = []
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {

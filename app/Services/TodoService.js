@@ -25,11 +25,17 @@ class TodoService {
 
   async toggleTodoStatus(todoId) {
     let todo = await ProxyState.todos.find(todo => todo.id == todoId);
+    console.log(todo)
+    if(todo.completed){
+    todo.completed = false
+    } else {
+    todo.completed = true
+    }
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-
-    let res = await api.put(url + todoId, todo);
+    let res = await api.put(url + todoId, {completed: todo.completed});
+    ProxyState.todos = ProxyState.todos
     //TODO how do you trigger this change
   }
 

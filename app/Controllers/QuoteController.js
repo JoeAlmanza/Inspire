@@ -3,10 +3,10 @@ import {ProxyState} from "../AppState.js"
 import quoteService from "../Services/QuoteService.js";
 
 function _drawQuote() {
-  debugger
   let quote = ProxyState.quote
   console.log(quote)
-  document.getElementById("quoteArea").innerHTML = `<h5 class="tooltip">${quote.body} <span class="tooltiptext">Author: ${quote.author}</span></h5>`
+  // @ts-ignore
+  document.getElementById("quoteArea").innerHTML = `<h5 class="tooltip">${quote.body} <span class="tooltiptext text-primary">Author: ${quote.author}</span></h5>`
 }
 
 export default class QuoteController {
