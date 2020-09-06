@@ -14,12 +14,12 @@
     <main class="container-fluid h-100" id="bg-img">
         <div class="row">
             <div class="offset-10 col-2" id="weatherArea" onclick="app.weatherController.toggleDeg()">
-                weather over here
+                <!-- weather goes here -->
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center clockRow" id="clockArea">
-                Clock Goes Here
+                <!-- clock goes here -->
             </div>
         </div>
         <div class="row mainRow">
@@ -31,12 +31,12 @@
                 <div class="row">
                     <div class="col p-0 mb-0 text-center text-primary bg-tp">
                         <div class="card-header" id="cardHeader">
-                            <h3 class="">To Do:</h3>
+                            <h4 class=""><u>To Do:</u></h4>
                         </div>
                         <form class="mt-1" onsubmit="app.todoController.addTodo(event, '${this.id}')">
                             <div class="form-group">
                                 <ul class="list-group list-group-flush"  id="todoArea">
-                        
+                                    <!-- todo list here -->
                                 </ul>
                             <input type="text" class="todoForm mt-3" id="todoBody" placeholder="Enter a task...">
                             </div>

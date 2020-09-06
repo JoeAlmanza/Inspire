@@ -24,11 +24,4 @@ export default class QuoteController {
     }
   }
 
-  getAuthor()
-{
-  try {
-    quoteService.getAuthor()
-  } catch (error) {
-    console.error(error);
-  }
-} }
+}
