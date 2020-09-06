@@ -1,19 +1,16 @@
 import {api} from "./AxiosService.js"
 import {ProxyState} from "../AppState.js"
+import Quote from "../Models/Quote.js";
 
 //TODO create methods to retrieve data and update the State
-class QuoteService { 
-  constructor(){
-
-  }
+class QuoteService {
 
   async getQuote(){
     let res = await api.get("quotes")
-    console.log(res);
-    ProxyState.quote = res.data.quote.body
+    console.log(res)
+    ProxyState.quote = res.data.quote
   }
-
- }
+}
 
 const quoteService = new QuoteService();
 export default quoteService;
