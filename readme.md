@@ -103,7 +103,7 @@ The todos portion of this project is the largest and will probably take the most
   - [X] Quote: Quote always displayed and Author reveals on hover
   - [X] Image: The image is required, however the additional data is optional
   - [X] Weather: The temp is displayed in Fahrenheit/Celsius with a click toggling between
-  - [ ] Todo: Todo's are shown on the page including a count of remaining tasks to complete
+  - [X] Todo: Todo's are shown on the page including a count of remaining tasks to complete
 - [X] The image should be on large display with at least one other element positioned over the top of the image.
 - [X] When adding a Todo the page does not reload
 - [ ] Completed Todo's checkbox remains checked on reload ([hint: checked attribute](https://www.w3schools.com/tags/att_input_checked.asp))
@@ -112,8 +112,8 @@ The todos portion of this project is the largest and will probably take the most
  ### Functionality
  - [X] Todo's can be added to a list (POST)
  - [X] Todo's can be removed (DELETE)
- - [ ] Todo's can be marked complete (PUT)
- - [ ] The data in the Todos persists on reload
+ - [X] Todo's can be marked complete (PUT)
+ - [X] The data in the Todos persists on reload
 
 ### EXTENSION IDEAS 
 - On hover the quote should show the author of the quote and disappear when not hovered over

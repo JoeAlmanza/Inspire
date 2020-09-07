@@ -6,7 +6,7 @@ export default class Weather {
     this.celcius = Math.floor(this.kelvin - 273.15) + "&deg; C"
     this.fahrenheit = Math.floor(this.kelvin * (9/5) - 459.67) + "&deg; F"
     this.showF = true
-    console.log('[RAW WEATHER API DATA]', data);
+    console.log('[RAW WEATHER API DATA]', data); 
     //XX NOTE Have you ever wanted to know the temperature measured in kelvin? 
     //      That is what this data returns! data.main.temp is the temperature in Kelvin
 
