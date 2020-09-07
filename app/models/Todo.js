@@ -2,7 +2,7 @@ export default class Todo {
   constructor({ _id, description, completed }) {
     this.id = _id;
     this.todo = description || [];
-    this.completed = false
+    this.completed = completed;
   }
 
   get Template() {

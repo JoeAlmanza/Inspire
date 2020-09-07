@@ -23,8 +23,8 @@ class TodoService {
     //TODO Handle this response from the server
   }
 
-  async toggleTodoStatus(todoId) {
-    let todo = await ProxyState.todos.find(todo => todo.id == todoId);
+  async toggleTodoStatus(id) {
+    let todo = await ProxyState.todos.find(t => t.id == id);
     console.log(todo)
     if(todo.completed){
     todo.completed = false
@@ -34,14 +34,14 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-    let res = await api.put(url + todoId, {completed: todo.completed});
+    let res = await api.put(url + id, todo);
+    console.log(res);
     ProxyState.todos = ProxyState.todos
     //TODO how do you trigger this change
   }
 
   async removeTodo(id) {
-    let res = 
-    await api.delete(url + id)
+    let res = await api.delete(url + id)
     ProxyState.todos = ProxyState.todos.filter(t => t.id !== id)
     //TODO Work through this one on your own
     //		what is the request type
