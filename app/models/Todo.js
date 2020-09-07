@@ -10,11 +10,11 @@ export default class Todo {
       let str = this.todo;
       let res = str.strike();
       return `
-    <li class="list-group-item p-0" onclick="app.todoController.toggleTodoStatus('${this.id}')">    ${res}  -  <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>
+    <li class="list-group-item p-0 doneText" onclick="app.todoController.toggleTodoStatus('${this.id}')"> <u> ${res} </u> <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>
     `
     }
     return `
-    <li class="list-group-item p-0" onclick="app.todoController.toggleTodoStatus('${this.id}')">    ${this.todo}  -  <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>
+    <li class="list-group-item p-0" onclick="app.todoController.toggleTodoStatus('${this.id}')"> <u> ${this.todo} </u> <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>
     `
   }
 

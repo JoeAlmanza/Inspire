@@ -53,6 +53,10 @@
   align-items: flex-end;
 }
 
+.doneText {
+  color: gray;
+}
+
 .hide {
   display: none;
 }
@@ -5021,7 +5025,9 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .list-group-item {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
   padding: 0.75rem 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
   cursor: pointer;

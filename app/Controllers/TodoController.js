@@ -18,7 +18,7 @@ function _drawRemaining() {
       remaining--
     }
   }
-  document.getElementById("todoLeft").innerHTML = `To Do: ${remaining}/${todos.length} left`
+  document.getElementById("todoLeft").innerHTML = `To Do: ${remaining}/${todos.length}`
 }
 
 export default class TodoController {

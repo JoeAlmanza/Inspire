@@ -19,7 +19,7 @@ export default class Weather {
   get fTemplate() {
     return `
       <div class="row">
-        <div class="card col-12 bg-tp text-primary text-center">
+        <div class="card col-12 bg-tp text-light text-center">
           <div class="card-body p-0">
             <h4>${this.city}</h4>
             <h5>${this.fahrenheit}</h5>
@@ -32,7 +32,7 @@ export default class Weather {
   get cTemplate() {
     return `
       <div class="row">
-        <div class="card col-12 bg-tp text-primary text-center">
+        <div class="card col-12 bg-tp text-light text-center">
           <div class="card-body p-0">
             <h4>${this.city}</h4>
             <h5>${this.celcius}</h5>
