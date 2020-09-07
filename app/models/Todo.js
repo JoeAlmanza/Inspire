@@ -12,7 +12,6 @@ export default class Todo {
       return `
     <li class="list-group-item p-0" onclick="app.todoController.toggleTodoStatus('${this.id}')">    ${res}  -  <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>
     `
-      
     }
     return `
     <li class="list-group-item p-0" onclick="app.todoController.toggleTodoStatus('${this.id}')">    ${this.todo}  -  <i class="fa fa-times text-danger" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i></li>

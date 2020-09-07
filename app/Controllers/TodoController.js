@@ -9,11 +9,24 @@ function _drawTodos() {
   document.getElementById("todoArea").innerHTML = template
 }
 
+
+function _drawRemaining() {
+  let todos = ProxyState.todos
+  let remaining = todos.length
+  for(let i = 0; i < todos.length; i++){
+    if (todos[i].completed == true) {
+      remaining--
+    }
+  }
+  document.getElementById("todoLeft").innerHTML = `To Do: ${remaining}/${todos.length} left`
+}
+
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     todoService.getTodos();
     ProxyState.on("todos", _drawTodos)
+    ProxyState.on("todos", _drawRemaining)
   }
 
   getTodos() {
@@ -23,6 +36,7 @@ export default class TodoController {
       console.error(error)
     }
   }
+
   addTodo(e, id) {
     e.preventDefault();
     let form = e.target;
@@ -43,6 +57,7 @@ export default class TodoController {
  * This method takes in an id of the Todo that should be togggled as complete
  * @param {string} id 
  */
+
   toggleTodoStatus(id) {
     try {
       todoService.toggleTodoStatus(id);
@@ -55,6 +70,7 @@ export default class TodoController {
    * This method takes in an id of the Todo that should be removed
    * @param {string} id 
    */
+
   removeTodo(id) {
     try {
       todoService.removeTodo(id);
