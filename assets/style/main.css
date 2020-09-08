@@ -85,8 +85,7 @@
 }
 
 .todoButton {
-  height: 40px;
-
+  max-height: 40px;
   max-width: 100%;
 }
 
