@@ -53,6 +53,10 @@
   align-items: flex-end;
 }
 
+.textShadow {
+  text-shadow: 1px 1px black;
+}
+
 .doneText {
   color: gray;
 }
@@ -5565,6 +5569,7 @@ a.close.disabled {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
+  text-shadow: 1px 1px black;
 }
 
 .tooltip .tooltiptext {
